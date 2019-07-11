@@ -9,13 +9,13 @@
 
 ## ARCHIVOS NECESARIOS
 
-Colocar en la carpeta especifica para el **plugin** de rust **`SCRAYUDA.cs`**  
+- Colocar en la carpeta especifica para el **plugin** de rust **`SCRAYUDA.cs`**  
 
 ```
 C:\Users\NAME\Desktop\SERVEROXIDE\oxide\plugins
 ```
 
-Un ejemplo de la carpeta de destino del **plugin**.
+- Un ejemplo de la carpeta de destino del **plugin**.
 
 
 
