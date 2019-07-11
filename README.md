@@ -12,10 +12,10 @@
 Colocar en la carpeta de plugins de rust **`SCRAYUDA.cs`**  
 
 ```
-git clone https://github.com/danielkrupinski/Osiris.git
+C:\Users\NAME\Desktop\SERVEROXIDE\oxide\plugins
 ```
 
-Then change build configuration to `Release | x86` and simply press **Build solution**.
+Un ejemplo de la carpeta de destino del **plugin**.
 
 
 
