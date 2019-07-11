@@ -1,36 +1,9 @@
 **SCRAYUDA** implements different teleportation features such as warps & homes.  
   
-## Permissions
+## COMANDOS DEL CHAT
+### AYUDA
 
-- `hwteleportation.admin` -- for admin commands (/tp & /tphere & /setwarp & /removewarp)  
-- `hwteleportation.tpr` -- for teleport request commands (/tpr & /tpa)  
-- `hwteleportation.home` -- for home commands (/home, /sethome, /removehome & /homes)  
-- `hwteleportation.warp` -- for warp commands (/warp & /warps)  
-
-## Chat Commands
-
-### Teleportation
-
-- `/tpa` -- accept an incoming teleport request  
-- `/tpr <player>` -- send a teleport request to another player  
-- `/tp <player>` -- teleport yourself to another player  
-- `/tp <playerA> <playerB>` -- teleport player A to player B  
-- `/tp <x> <y> <z>` -- teleport yourself to a location (~ can be used as x, y, and z respectively, to represent your x, y, and z)
-- `/tphere <player>` -- teleport another player to yourself  
- 
-### Homes
-  
-- `/home <home>` -- teleport to your home  
-- `/homes` -- list all your homes  
-- `/sethome <home>` -- set your home location 
-- `/removehome <home>` -- remove your home location 
-
-### Warps 
-
-- `/warp <warp>` -- teleport to a warp location
-- `/warps` -- list all available warps  
-- `/setwarp <warp>` -- set a new warp  
-- `/removewarp <warp>` -- remove a warp  
+- `/ayuda` -- Información sobre otros comandos del server u otras opciones.   
 
 ## What are Homes?
 
