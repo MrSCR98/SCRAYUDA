@@ -51,74 +51,8 @@ You can set up a cooldown in the configuration file so players can only teleport
 In the Home Count Limit permissions section you can add, remove, or edit rows.  
 Players with the permission on the left-hand side will receive the home count limit set on the right-hand side.
 
-### Default Configuration
 
-```json
-{
-  "TPR": {
-    "Enabled": true,
-    "Pending Timer (in seconds)": 30.0,
-    "Teleport Timer (in seconds)": 15.0,
-    "Cooldown (in minutes)": 5.0
-  },
-  "Home": {
-    "Enabled": true,
-    "Check for Stakes (true/false)": true,
-    "Stake Detection Radius": 10.0,
-    "Teleport Timer (in seconds)": 15.0,
-    "Cooldown (in minutes)": 5.0,
-    "Home Count Limit": 3,
-    "Home Count Limits (granted by permissions)": {
-      "HWTeleportation.homelimit.basic": 1,
-      "HWTeleportation.homelimit.extended": 2
-    }
-  },
-  "Warp": {
-    "Enabled": true,
-    "Teleport Timer (in seconds)": 15.0,
-    "Cooldown (in minutes)": 10.0
-  }
-}
-```
-
-## Localization
-
-```json
-{
-  "No Permission": "You don't have permission to use this command.",
-  "Request Ran Out": "Your pending teleport request ran out of time.",
-  "Request Sent": "Teleport request sent.",
-  "Request Got": "{player} would like to teleport to you. Accept by typing /tpa.",
-  "Teleported": "You have been teleported to {target}.",
-  "Accepted Request": "{player} has accepted your teleport request.",
-  "No Pending": "You don't have a pending teleport request.",
-  "Already Pending": "{player} already has a teleport request pending.",
-  "Teleporting Soon": "You will be teleported in {time} seconds.",
-  "Teleport To Self": "You may not teleport to yourself.",
-  "No Homes": "You do not have any homes.",
-  "Home Set": "You have set your home '{home}'",
-  "Home Removed": "You have removed your home '{home}'",
-  "Home Exists": "You already have a home called '{home}'",
-  "Home Teleported": "You have been teleported to your home '{home}'",
-  "Home List": "Your Homes: {homes}",
-  "Max Homes": "You may not have more than {count} homes!",
-  "Unknown Home": "You don't have a home called '{home}'",
-  "Home Compromised": "You are not authorized at any stakes near your home '{home}'. The home was therefore removed.",
-  "No Stake": "You need to be close to a stake you're authorized at to set a home.",
-  "Home Cooldown": "You need to wait {time} minutes before teleporting to a home again.",
-  "TPR Cooldown": "You need to wait {time} minutes before sending the next teleport request.",
-  "Warp Set": "You have set warp '{warp}' at your current location.",
-  "Warp Removed": "You have removed warp '{warp}'",
-  "Warp Teleported": "You have been teleported to warp '{warp}'",
-  "Unknown Warp": "There is no warp called '{warp}'",
-  "Warp List": "Available Warps: {warps}",
-  "Warp Exists": "There already is a warp called '{warp}'",
-  "No Warps": "There are no warps set.",
-  "Warp Cooldown": "You need to wait {time} minutes before teleporting to a warp again.",
-  "Target Location Unsafe": "The target location is currently not safe to teleport to."
-}
-```
-# Osiris [![C++](https://img.shields.io/badge/language-C%2B%2B-%23f34b7d.svg)](https://en.wikipedia.org/wiki/C%2B%2B) [![CS:GO](https://img.shields.io/badge/game-CS%3AGO-yellow.svg)](https://store.steampowered.com/app/730/CounterStrike_Global_Offensive/) [![Windows](https://img.shields.io/badge/platform-Windows-0078d7.svg)](https://en.wikipedia.org/wiki/Microsoft_Windows) [![x86](https://img.shields.io/badge/arch-x86-red.svg)](https://en.wikipedia.org/wiki/X86) [![License](https://img.shields.io/github/license/danielkrupinski/Osiris.svg)](LICENSE) ![](https://img.shields.io/github/issues/danielkrupinski/Osiris.svg)
+# SCRAYUDA [![C#](https://img.shields.io/badge/language-C%2B%2B-%23f34b7d.svg)](https://en.wikipedia.org/wiki/C%2B%2B) [![RUST](https://img.shields.io/badge/game-CS%3AGO-yellow.svg)](https://store.steampowered.com/app/730/CounterStrike_Global_Offensive/) [![Windows](https://img.shields.io/badge/platform-Windows-0078d7.svg)](https://en.wikipedia.org/wiki/Microsoft_Windows) [![x86](https://img.shields.io/badge/arch-x86-red.svg)](https://en.wikipedia.org/wiki/X86) [![License](https://img.shields.io/github/license/danielkrupinski/Osiris.svg)](LICENSE) ![](https://img.shields.io/github/issues/danielkrupinski/Osiris.svg)
 
 Free open-source training software / cheat for **Counter-Strike: Global Offensive** game. Designed as internal cheat - [Dynamic-link library](https://en.wikipedia.org/wiki/Dynamic-link_library) (DLL) loadable into game process. Compatible with the latest version of the game on Steam.
 
@@ -251,35 +185,4 @@ Then change build configuration to `Release | x86` and simply press **Build solu
 
 If everything went right you should receive `Osiris.dll`  binary file.
 
-### Loading / Injecting into game process
-
-Open your favorite [DLL injector](https://en.wikipedia.org/wiki/DLL_injection) and just inject `Osiris.dll` into `csgo.exe` process.
-
-When injected, menu is openable under `INSERT` key.
-
-
-### Further optimizations
-If your CPU supports AVX / AVX2 instruction set, you can enable it in project settings. This should result in more performant code, optimized for your CPU. Currently SSE2 instructions are selected in project settings.
-
-## FAQ
-
-### How do I open menu?
-Press `INSERT` key while focused on CS:GO window.
-
-### Where is my config file saved?
-Configuration files are saved inside `Osiris` folder in your `Documents` folder (`%USERPROFILE%\Documents\Osiris`). The config is binary serialized so it is not meant to be edited by humans. Sometimes after updates configuration file needs to be deleted and recreated.
-
-### What is cheat execution entry point and where is it located?
-Osiris is based on six main global objects ("modules") - see [Osiris.cpp](https://github.com/danielkrupinski/Osiris/blob/master/Osiris/Osiris.cpp) file for detailes. The modules are initialized in the order they are declared in above file as they depend on each other.
-
-## Acknowledgments
-
-* [ocornut](https://github.com/ocornut) and [contributors](https://github.com/ocornut/imgui/graphs/contributors) for creating such amazing GUI library - [imgui](https://github.com/ocornut/imgui).
-* [Zer0Mem0ry](https://github.com/Zer0Mem0ry) - for great tutorials on reverse engineering and game hacking
-
-## License
-
-> Copyright (c) 2018-2019 Daniel Krupiński
-
-This project is licensed under the [MIT License](https://opensource.org/licenses/mit-license.php) - see the [LICENSE](LICENSE) file for details.
 
