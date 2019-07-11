@@ -9,7 +9,7 @@
 
 ## ARCHIVOS NECESARIOS
 
-Colocar en la carpeta de plugins de rust **`SCRAYUDA.cs`**  
+Colocar en la carpeta especifica para el **plugin** de rust **`SCRAYUDA.cs`**  
 
 ```
 C:\Users\NAME\Desktop\SERVEROXIDE\oxide\plugins
